@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="chatbot-header">
+            <h1>📚 Educational Chatbot</h1>
+            <p>Learn Physics, Chemistry, Biology, Government, Grammar, and Math!</p>
+        </div>
+        
+        <div class="chat-box">
+            <div id="messages" class="messages">
+                <div class="message bot-message">
+                    <p>Hello! I'm your educational chatbot. I can help you with:</p>
+                    <ul style="text-align: left; margin-top: 10px;">
+                        <li><strong>Physics:</strong> Force, motion, velocity, acceleration</li>
+                        <li><strong>Chemistry:</strong> Atoms, molecules, elements, reactions</li>
+                        <li><strong>Biology:</strong> Cells, organisms, DNA, photosynthesis</li>
+                        <li><strong>Government:</strong> Democracy, constitution, laws, politics</li>
+                        <li><strong>Grammar:</strong> Spell checking and corrections</li>
+                        <li><strong>Math:</strong> Calculations and problem solving</li>
+                    </ul>
+                    <p style="margin-top: 10px;">What would you like to learn about?</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="input-box">
+            <input 
+                type="text" 
+                id="userInput" 
+                placeholder="Ask me anything..." 
+                autocomplete="off"
+            >
+            <button id="sendBtn">Send</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+</html>
